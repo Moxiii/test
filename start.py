@@ -40,3 +40,4 @@ def encryption():
     encrypt(filename,key)
 
 encryption()
+print('test')
