@@ -28,3 +28,8 @@ with open('encrypted.bin' , 'rb') as file :
 cipher = AES.new(key , AES.MODE_CBC , iv=iv)
 original = unpad(cipher.decrypt(decrypted),AES.block_size)
 print(original)
+def upload():
+    file = askopenfilename()
+    file_read=open(file,'r')
+    print(file_read.read())
+upload()
