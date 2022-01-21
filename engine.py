@@ -15,3 +15,4 @@ with open('FILE/PLAIN/test.txt' , 'rb') as file:
     file.read()
 message = "message to encode"
 print(len(message), message)
+# ressource : https://medium.com/swlh/an-introduction-to-the-advanced-encryption-standard-aes-d7b72cc8de97
