@@ -26,10 +26,26 @@ with open('encrypted.bin' , 'rb') as file :
     decrypted = file.read()
 
 cipher = AES.new(key , AES.MODE_CBC , iv=iv)
-original = unpad(cipher.decrypt(decrypted),AES.block_size)
-print(original)
-def upload():
-    file = askopenfilename()
-    file_read=open(file,'r')
-    print(file_read.read())
-upload()
+
+
+
+print('Please select option:\n1. Encryption\n2. Decryption\n3. Exit')
+
+while True:
+    user_choice = input("Choose a option: ")
+    if user_choice == "1":
+         file = askopenfilename()
+         file_read=open(file,'r')
+         data = cipher.encrypt(file_read,AES.block_size)
+         print(key)
+
+
+    elif user_choice == "2":
+        print(file.read())
+        original = unpad(cipher.decrypt(decrypted),AES.block_size)
+        print(key)
+    elif user_choice == "3":
+        print("Quitting The Program....")
+        break
+    else:
+        print("Please Choose a correct option")
