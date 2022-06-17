@@ -13,15 +13,15 @@ class Carre :
     def calculate_area(self):
         return self.w ** 2
 
-i = input('carré ou rectangle')
-if i == 'carré':
+i = input('carré ou rectangle  :')
+if i == 'carré' or 'carre' or 'Carré' or 'Carre':
     w = int(input('entrer la longueur ou la largeur'))
     h = w
     calcul = Carre(w)
     resultat = calcul.calculate_area()
     print('le resultat est :' , resultat )
 
-if i == 'rectangle':
+elif i == 'rectangle':
     w = int(input('entrer la largeur'))
     h = int(input('entrer la longueur '))
     calcul = Rectangle(w, h)
